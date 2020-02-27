@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
+    <ProjectGuid>{995E758F-D656-4D2C-B679-69B81E58672F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -73,6 +74,10 @@
     <Compile Remove="ViewModels\OldUnusedViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WCFClientUpgrade\WCFClientUpgrade.csproj" />
+    <ProjectReference Include="..\WCFClientUpgrade\WCFClientUpgrade.csproj">
+      <Project>{9a2f358d-88b1-4d93-9c63-4699ffd8df78}</Project>
+      <Name>WCFClientUpgrade</Name>
+    </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
